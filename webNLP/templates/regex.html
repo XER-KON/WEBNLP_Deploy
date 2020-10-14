@@ -1,0 +1,31 @@
+Das kannst du igonrieren das hat nichts mit der eigentlichen Webiste zu tun
+{% if rphone %}
+  <style>
+  .widthx{width:1200px;}
+
+  </style>
+
+  <div class="container">
+
+  <break>
+  </break>
+
+  <div class="container">
+      <div class="row">
+
+  <form class="form-group widthx" method="POST" action="{% url 'Adresse' %}">
+    {% csrf_token %}
+    <label for="exampleFormControlTextarea1"><strong>Bitte Postleitzahl hier eigeben</strong></label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name='deinemutterform' placeholder="Bitte
+    Adresse hier eingeben"></textarea>
+    </break>
+    <div class="container">
+    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
+    </div>
+
+  </form>
+  </div>
+  </div>
+{% else %}
+{% endif %}
+<h1>Keine Nummer eingegeben</h1>
